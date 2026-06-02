@@ -3,6 +3,7 @@ import { Environment, Edges } from '@react-three/drei';
 import { useFrame, useThree } from '@react-three/fiber';
 import * as THREE from 'three';
 import { globalTimeRef } from '../constants';
+import skyTexture from '../assets/sky.hdr?url';
 
 export default function Terrarium() {
   const { scene } = useThree();
@@ -19,7 +20,7 @@ export default function Terrarium() {
 
   return (
     <>
-      <Environment files="sky.hdr" background />
+      <Environment files={skyTexture} background />
       <mesh position={[0, 3.5, 0]}>
         <boxGeometry args={[20.2, 20.2, 20.2]} />
         <meshPhysicalMaterial 
