@@ -9,7 +9,7 @@ export default function Terrarium() {
   const { scene } = useThree();
 
   useFrame(() => {
-    // 시간에 따라 HDRI 환경의 빛 반사 강도 조절 (밤에는 환경광이 어두워짐)
+    {/* HDRI 환경의 빛 반사 강도 조절 (밤에는 환경광이 어두워짐) */}
     const s = Math.sin(globalTimeRef.current);
     const dayFactor = (s + 1) / 2;
     const intensity = 0.05 + dayFactor * 0.95;

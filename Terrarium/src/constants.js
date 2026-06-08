@@ -7,7 +7,7 @@ export const CONFIG = {
   skyNight: new THREE.Color('#030712'),
   ambientDay: new THREE.Color('#ffffff'),
   ambientNight: new THREE.Color('#3a415a'),
-  carColors: ['#ff0000', '#0000ff', '#fbc02d', '#4caf50', '#ffffff', '#212121', '#9c27b0', '#ff5722'],
+  carColors: ['#ff0000', '#0000ff', '#fbc02d', '#4caf50', '#ffffff', '#635959', '#9c27b0'],
   roadY: -1.48,      
   wheelRadius: 0.15, 
   boundX: 20,        

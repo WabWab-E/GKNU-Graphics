@@ -1,7 +1,7 @@
 import React from 'react';
 
 export default function DashboardUI({ timeMode, setTimeMode, globalSpeed, setGlobalSpeed, uiPhase }) {
-  // 상태별 색상 테마 동적 변경
+
   const getPhaseTheme = () => {
     if (uiPhase.includes('낮')) return { color: '#ffe082', bg: 'rgba(255, 193, 7, 0.18)', border: '#ffca28' };
     if (uiPhase.includes('밤')) return { color: '#9fa8da', bg: 'rgba(63, 81, 181, 0.25)', border: '#5c6bc0' };
@@ -45,7 +45,7 @@ export default function DashboardUI({ timeMode, setTimeMode, globalSpeed, setGlo
           <span>🏃 전체 애니메이션 배속</span>
           <span style={{ color: '#4fc3f7', fontFamily: 'monospace' }}>{globalSpeed.toFixed(1)}x</span>
         </div>
-        <input type="range" min="0.0" max="3.0" step="0.1" value={globalSpeed} onChange={(e) => setGlobalSpeed(parseFloat(e.target.value))} style={{ width: '100%', cursor: 'pointer', accentColor: '#4fc3f7' }} />
+        <input type="range" min="0.0" max="5.0" step="0.1" value={globalSpeed} onChange={(e) => setGlobalSpeed(parseFloat(e.target.value))} style={{ width: '100%', cursor: 'pointer', accentColor: '#4fc3f7' }} />
       </div>
     </div>
   );

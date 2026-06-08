@@ -14,13 +14,13 @@ export default function OrbitalLights() {
     const radius = 11.5;
     const centerY = 0.5;
 
-    // 공전 궤도
+    {/* 공전 궤도 */}
     const sunX = Math.cos(time) * radius;
     const sunY = centerY + s * radius;
     const moonX = Math.cos(time + Math.PI) * radius;
     const moonY = centerY + Math.sin(time + Math.PI) * radius;
 
-    // 자연스러운 빛 페이드인/아웃 조절
+    {/* 빛 페이드 인/아웃 조절*/}
     if (sunLightRef.current) {
       sunLightRef.current.position.set(sunX, sunY, -1);
       sunLightRef.current.intensity = Math.max(0, s) * 2.5; 

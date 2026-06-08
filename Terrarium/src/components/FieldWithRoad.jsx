@@ -40,7 +40,7 @@ export default function FieldWithRoad() {
         <meshStandardMaterial color="goldenrod" roughness={0.8} />
       </mesh>
       
-      {/* 밭이랑 패턴 */}
+      {/* 밭 */}
       {ridges.map((ridge, idx) => (
         <mesh key={idx} position={[ridge.x, -1.45, ridge.z]} castShadow receiveShadow>
           <boxGeometry args={[0.4, 0.1, ridge.length]} />
