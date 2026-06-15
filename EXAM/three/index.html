@@ -2,7 +2,7 @@
 <html lang="ko">
 <head>
     <meta charset="UTF-8">
-    <title>Three.js Clockwise Centered Triangle</title>
+    <title>Three.js Rainbow Triangle</title>
     <style>body { margin: 0; overflow: hidden; background-color: #111; }</style>
 </head>
 <body>
@@ -19,11 +19,10 @@
 
         const geometry = new THREE.BufferGeometry();
         
-        // 무게중심이 (0,0)에 오도록 정점 좌표 수정
         const vertices = new Float32Array([
-             0.0,  0.666, 0.0, // 위
-            -0.5, -0.333, 0.0, // 왼쪽 아래
-             0.5, -0.333, 0.0  // 오른쪽 아래
+             0.0,  0.666, 0.0, 
+            -0.5, -0.333, 0.0, 
+             0.5, -0.333, 0.0  
         ]);
         
         const colors = new Float32Array([
