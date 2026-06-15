@@ -7,17 +7,13 @@ function WebGPUBridge() {
   const { gl, size, scene, camera } = useThree();
 
   useMemo(async () => {
-    // 1. 기존 WebGLRenderer를 WebGPURenderer로 교체
     const webgpuRenderer = new WebGPURenderer({
       canvas: gl.domElement,
       antialias: true,
     });
     
-    // 2. 초기화
     await webgpuRenderer.init();
     
-    // 3. R3F의 렌더러를 WebGPU 렌더러로 덮어쓰기
-    // 렌더링 루프를 직접 커스텀하게 설정
     gl.render = (s, c) => webgpuRenderer.render(s, c);
   }, [gl]);
 
